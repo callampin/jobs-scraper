@@ -1,0 +1,11 @@
+{
+  "base_url": "https://www.chiletrabajos.cl",
+  "location": "Chile",
+  "days": 30,
+  "delay_seconds": 1.5,
+  "timeout_seconds": 30,
+  "max_retries": 4,
+  "backoff_seconds": 2.0,
+  "user_agent": "ChileSoftwareJobsScraper/1.0 (local personal job search)",
+  "output_dir": "results"
+}

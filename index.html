@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Portal local minimalista de ofertas de trabajo en Chile.">
+    <title>Jobs-scraper</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&amp;family=Geist+Pixel&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#ofertas">Saltar a las ofertas</a>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="./" aria-label="Jobs-scraper, volver al inicio">
+          <span class="brand-glyph" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="brand-name">Jobs<span>-</span>scraper</span>
+          <span class="brand-caption">EMPLEOS / CHILE</span>
+        </a>
+        <div class="dataset-status" title="Estado del archivo jobs.json">
+          <span class="status-light" id="status-light" aria-hidden="true"></span>
+          <span id="dataset-status">CARGANDO DATOS</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-main">
+            <p class="eyebrow"><span class="prompt" aria-hidden="true">&gt;_</span> CONVOCATORIAS / CHILE</p>
+            <h1 id="hero-title">Encuentra tu<br>próximo trabajo<span class="accent">.</span></h1>
+          </div>
+          <div class="hero-aside">
+            <p>Ofertas reunidas desde portales chilenos. Sin ruido, sin cuentas y con enlace directo a cada publicación.</p>
+            <dl class="hero-stats">
+              <div>
+                <dt>OFERTAS</dt>
+                <dd id="hero-total">—</dd>
+              </div>
+              <div>
+                <dt>FUENTES</dt>
+                <dd id="hero-sources">—</dd>
+              </div>
+              <div>
+                <dt>VISIBLES</dt>
+                <dd id="hero-visible">—</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="filters" aria-labelledby="filters-title">
+          <div class="section-label">
+            <h2 id="filters-title">FILTRAR RESULTADOS</h2>
+            <span>01 / BÚSQUEDA LOCAL</span>
+          </div>
+
+          <form id="filters-form">
+            <div class="search-field">
+              <label for="search">Buscar en las ofertas</label>
+              <div class="search-control">
+                <span class="search-prompt" aria-hidden="true">&gt;</span>
+                <input id="search" name="search" type="search" placeholder="Cargo, tecnología, empresa o palabra clave..." autocomplete="off" spellcheck="false">
+                <kbd id="search-shortcut" aria-label="Atajo: barra diagonal">/</kbd>
+              </div>
+            </div>
+
+            <div class="filter-grid">
+              <div class="field">
+                <label for="source-filter">Portal</label>
+                <div class="select-wrap">
+                  <select id="source-filter" name="source">
+                    <option value="all">Todos los portales</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="modality-filter">Modalidad</label>
+                <div class="select-wrap">
+                  <select id="modality-filter" name="modality">
+                    <option value="all">Todas las modalidades</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="location-filter">Ubicación</label>
+                <div class="select-wrap">
+                  <select id="location-filter" name="location">
+                    <option value="all">Todas las ubicaciones</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="company-filter">Empresa</label>
+                <div class="select-wrap">
+                  <select id="company-filter" name="company">
+                    <option value="all">Todas las empresas</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="tag-filter">Categoría o etiqueta</label>
+                <div class="select-wrap">
+                  <select id="tag-filter" name="tag">
+                    <option value="all">Todas las categorías</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="period-filter">Publicación</label>
+                <div class="select-wrap">
+                  <select id="period-filter" name="period">
+                    <option value="all">Cualquier fecha</option>
+                    <option value="1">Últimas 24 horas</option>
+                    <option value="7">Últimos 7 días</option>
+                    <option value="14">Últimos 14 días</option>
+                    <option value="30">Últimos 30 días</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="filters-footer">
+              <p id="filters-summary" aria-live="polite">SIN FILTROS ACTIVOS</p>
+              <button class="text-button" id="clear-filters" type="button" disabled>Limpiar filtros <span aria-hidden="true">×</span></button>
+            </div>
+          </form>
+        </section>
+
+        <section class="results" id="ofertas" aria-labelledby="results-title">
+          <div class="results-toolbar">
+            <div>
+              <p class="eyebrow">02 / OFERTAS ENCONTRADAS</p>
+              <h2 id="results-title"><span id="result-count">—</span> <span id="result-noun">ofertas</span></h2>
+            </div>
+            <div class="sort-field">
+              <label for="sort-order">ORDENAR POR</label>
+              <div class="select-wrap">
+                <select id="sort-order" name="sort">
+                  <option value="date-desc">Más recientes</option>
+                  <option value="date-asc">Más antiguas</option>
+                  <option value="title-asc">Cargo A–Z</option>
+                  <option value="company-asc">Empresa A–Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="active-chips" id="active-chips" aria-label="Filtros activos" hidden></div>
+
+          <div class="jobs-list" id="jobs-list" aria-live="polite" aria-busy="true">
+            <div class="loading-state" id="loading-state" role="status">
+              <span class="sr-only">Cargando ofertas</span>
+              <div class="loading-row"></div>
+              <div class="loading-row"></div>
+              <div class="loading-row"></div>
+            </div>
+          </div>
+
+          <div class="state-panel" id="empty-state" hidden>
+            <span class="state-code">[ 00 ]</span>
+            <h3>No hay coincidencias.</h3>
+            <p id="empty-message">Prueba con otros filtros o elimina algunos términos de búsqueda.</p>
+            <button class="outline-button" id="reset-empty" type="button">Limpiar filtros</button>
+          </div>
+
+          <div class="state-panel error-panel" id="error-state" role="alert" hidden>
+            <span class="state-code">[ ERROR ]</span>
+            <h3>No se pudo cargar jobs.json.</h3>
+            <p id="error-message"></p>
+            <p class="error-help">Desde la raíz del proyecto ejecuta <code>.venv/bin/python -m http.server 8000 --bind 127.0.0.1</code> y abre <code>http://localhost:8000</code>.</p>
+            <button class="outline-button" id="retry-load" type="button">Reintentar</button>
+          </div>
+
+          <noscript>
+            <div class="state-panel">
+              <h3>JavaScript está desactivado.</h3>
+              <p>Actívalo para visualizar y filtrar las ofertas. También puedes abrir directamente <a href="jobs.json">jobs.json</a>.</p>
+            </div>
+          </noscript>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>DATOS LOCALES / HTML + CSS + JS</span>
+        <span id="last-update">ESPERANDO EXTRACCIÓN</span>
+        <a href="jobs.json" download>DESCARGAR JSON <span aria-hidden="true">↓</span></a>
+      </footer>
+    </div>
+  </body>
+</html>

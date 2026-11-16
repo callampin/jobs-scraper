@@ -1,0 +1,8 @@
+# Entorno Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Datos generados por las búsquedas, no se publican
+jobs.json
+# results/

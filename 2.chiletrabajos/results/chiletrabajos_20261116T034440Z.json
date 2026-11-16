@@ -1,0 +1,40 @@
+[
+  {
+    "source": "chiletrabajos",
+    "job_id": "3932267",
+    "title": "Analista de Tesorería - Las Condes",
+    "company": "Empresa Sector Financiero",
+    "location": "Santiago",
+    "modality": null,
+    "salary": "1",
+    "published_at": "2026-11-14T15:25:58Z",
+    "url": "https://www.chiletrabajos.cl/trabajo/analista-de-tesoreria-las-condes-3932267",
+    "description": "Importante empresa del sector financiero, está en búsqueda de un/a Analista de Tesorería para incorporarse a la brevedad a su área de Impuestos y Operaciones Financieras. Deberás gestionar procesos operativos de tesorería mediante uso de datos, automatización y sistemas para asegurar continuidad transaccional, exactitud contable y mejora continua en la relación con bancos y clientes internos.\nSi estás interesado/a te invitamos a revisar los requisitos y postular con tu CV actualizado y respondiendo las preguntas.\nLas funciones y requisitos son los siguientes:\nFunciones:\nAnalizar movimientos bancarios y conciliaciones para mantener consistencia de registros contables.\nControlar procesos de pagos para asegurar integridad, oportunidad y trazabilidad del proceso.\nAdministrar la relación operativa con bancos y proveedores para asegurar continuidad transaccional.\nCoordinar actividades de apoyo a cierres financieros para sostener exactitud operativa.\nMonitorear flujos de caja para anticipar desviaciones y priorizar acciones según calendarios y volúmenes.\nImplementar mejoras y automatizaciones en procesos operativos utilizando herramientas tecnológicas y de datos.\nOptimizar reportes de pagos y conciliaciones para fortalecer la calidad del registro contable.\nProponer soluciones de mejora continua a partir del análisis de datos y reporte de desviaciones.\nRequisitos:\nTítulo de Contador/a, Contador/a Auditor/a, Ingeniero/a Comercial o carrera afín.\nAl menos 2 años de experiencia directa en tesorería, pagos, conciliaciones bancarias o gestión bancaria (excluyente).\nAplicación de conocimientos tecnicos en: registro contable, conciliaciones bancarias, gestión de pagos, flujo de caja, gestión operativa de tesorería, análisis de datos, automatización de procesos.\nConocimientos y aplicación de normativa regulatoria del sistema financiero, normas contables aplicables (IFRS/NIC), lineamientos de control interno.\nHerramientas y plataformas: Excel avanzado, SQL, Python, herramientas de inteligencia artificial aplicada a procesos de negocio, ERP financiero, plataformas bancarias, sistemas de conciliación.\nCertifcaciones o capacitación deseable en SQL, Python, analítica de datos o automatización de procesos financieros.",
+    "tags": [
+      "Economía / Contabilidad",
+      "tesorería",
+      "procesos",
+      "datos"
+    ],
+    "scraped_at": "2026-11-16T03:44:40Z"
+  },
+  {
+    "source": "chiletrabajos",
+    "job_id": "3931832",
+    "title": "Práctica de Procesos – IDIEM (U. de Chile)",
+    "company": "Idiem",
+    "location": "Santiago",
+    "modality": null,
+    "salary": null,
+    "published_at": "2026-11-13T15:30:31Z",
+    "url": "https://www.chiletrabajos.cl/trabajo/practica-de-procesos-idiem-u-de-chile-3931832",
+    "description": "Centro de Investigación, Desarrollo e Innovación de la Universidad de Chile, líder nacional en ingeniería y tecnología, busca incorporar a un/a estudiante en práctica para el área de Optimización de Procesos y Mejora Continua.\nTu objetivo:\nRealizar el levantamiento, diagnóstico y rediseño de flujos operativos en la unidad, asegurando la correcta adopción del nuevo sistema de captura e integración de datos y proponiendo iniciativas de mejora continua.\n¿Qué harás?\n• Levantamiento y mapeo de procesos actuales (As-Is) en las áreas operativas vinculadas a la medición y registro de datos.\n• Diseño del nuevo flujo de trabajo (To-Be) incorporando las herramientas de automatización desarrolladas.\n• Definición de indicadores clave de desempeño (KPIs) y control de tiempos/errores para evaluar el impacto de la mejora.\n• Elaboración de manuales de usuario, protocolos operacionales y capacitación al personal de la unidad.\n• Identificación de nuevos cuellos de botella y propuesta de proyectos de renovación de procesos.\n¿Qué buscamos?\n• Cursando carrera de Ingeniería Civil Industrial, Ingeniería de Procesos o carreras afines a la gestión y diseño operativo.\n• Conocimientos en modelamiento de procesos (BPMN, Bizagi, Visio o similar).\n• Manejo avanzado de herramientas de análisis de datos (Excel / Google Sheets, Power BI o similar).\n• Capacidad analítica, pensamiento crítico y metodologías de mejora continua (Lean, 5S, Kaizen o similar).\n• Conocimientos de programación (Python, JavaScript / Apps Script, o similar).\nOfrecemos\nSer parte de una institución con el respaldo de la Universidad de Chile.\nAprendizaje en gestión de datos y normativas de calidad.",
+    "tags": [
+      "Prácticas profesionales",
+      "procesos",
+      "mejora",
+      "datos"
+    ],
+    "scraped_at": "2026-11-16T03:44:40Z"
+  }
+]

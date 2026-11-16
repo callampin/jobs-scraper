@@ -1,0 +1,46 @@
+[
+  {
+    "source": "get_on_board",
+    "job_id": "docente-fundamentos-de-machine-learning-plaza-norte-duoc-uc-santiago",
+    "title": "Docente Fundamentos de Machine Learning Plaza Norte",
+    "company": "Duoc UC",
+    "location": "Santiago",
+    "modality": "presencial",
+    "salary": null,
+    "published_at": "2026-11-12T18:28:38Z",
+    "url": "https://www.getonbrd.com/jobs/docente-fundamentos-de-machine-learning-plaza-norte-duoc-uc-santiago",
+    "description": "Duoc UC es una institución de educación superior técnico profesional autónoma y católica, con más de 50 años de historia y la máxima acreditación institucional. Nos enfocamos en formar técnicos y profesionales a través de 9 escuelas y más de 70 carreras vigentes, presentes en 18 sedes regionales. Nuestro equipo docente colabora en entornos multidisciplinarios y con enfoque en valores institucionales, buscando aportar al desarrollo económico de Chile mediante una educación de calidad y actualizada.\n\nFunciones del cargo\nDuoc UC Sede Plaza Norte, Escuela de Informática y Telecomunicaciones requiere contratar docente para la asignatura de Fundamentos de Machine Learning que será responsable de liderar el proceso de enseñanza y aprendizaje de acuerdo con el modelo educativo, alineado al marco valórico institucional, movilizando su formación y experiencia profesional, valores y conocimiento disciplinar, para ser un real aporte al aprendizaje de los estudiantes.\n\nRequerimientos del cargo\n- Formación: Ingeniería Informática afín al área de desarrollo de Software con Python/Machine Learning/Minería de Datos.\n- Experiencia: 3 años\n- Otros Requisitos: Manejo en metodologías como: CRISP-DM-KDD, SEMMA. / Conocimientos de estadística descriptiva e inferencial. Manejo de Python.\n\nCondiciones\nLa institución ofrece un entorno educativo con trayectoria, enfoque en valores institucionales y desarrollo profesional. Jornada diurna en la sede San Carlos de Apoquindo, posibilidad de integrarse a equipos multicisciplinarios, y apoyo para desarrollo docente y actualización tecnológica. Otras condiciones y beneficios serán detallados en la etapa de contratación y contrato, conforme a las políticas de Duoc UC.",
+    "tags": [
+      "Education & Coaching",
+      "Machine Learning",
+      "Python",
+      "Data Mining",
+      "CRISP-DM",
+      "SemRush",
+      "Software Engineering"
+    ],
+    "scraped_at": "2026-11-16T03:44:38Z"
+  },
+  {
+    "source": "get_on_board",
+    "job_id": "ingeniero-llm-rag-agentes-solox-santiago",
+    "title": "Ingeniero LLM / RAG / Agentes",
+    "company": "Solox",
+    "location": "Santiago",
+    "modality": "híbrido",
+    "salary": "USD 2700 - 3200 brutos/mes",
+    "published_at": "2026-11-12T12:02:46Z",
+    "url": "https://www.getonbrd.com/jobs/ingeniero-llm-rag-agentes-solox-santiago",
+    "description": "Estamos conformando un equipo que con el uso de IA, agentes y machine learning, nos permita generar valor a diferentes etapas del negocio minero.\nEjemplo: optimizacion de procesos, reportabilidad automatica, planificacion de procesos y resecuenciamiento de actividades utilizando agentes, etc.\nTenemos multiples clientes mineros ubicados en Chile, con la decision tomada de avanzar en soluciones IA.\nLos proyectos requieren viajes esporadicos a faenas mineras. El trabajo del dia a dia requiere participacion en reuniones con clientes y desarrollar soluciones basadas en agentes.\nNuestra vision es ser una startup que aporte valor a sus clientes mineros, apoyando su transformacion digital hacia el uso de la data de manera efectiva e inteligente para su toma de decisiones estrategicas y operacionales\n\nFunciones del cargo\n- Diseñar y construir el agente: RAG sobre documentos y datos de areas operacionales en la mina, uso de herramientas y flujos con validación humana.\n- Hacer que las respuestas citen sus fuentes y se abstengan cuando no hay evidencia.\n- Montar la evaluación del agente: conjuntos de prueba, métricas de calidad y detección de regresiones.\n- Registrar trazas y decisiones para auditoría.\n- Elegir y comparar modelos (APIs comerciales y modelos abiertos) según costo, calidad y confidencialidad.\n- Trabajar con el ingeniero expertos en el proceso minero para que las reglas y diagnósticos sean técnicamente correctos.\n\nRequerimientos del cargo\n- 3 o más años en ML o ingeniería de software, con proyectos de LLM, RAG o agentes en producción.\n- Python sólido y experiencia con bases vectoriales y búsqueda híbrida.\n- Experiencia evaluando sistemas con LLM, más allá de probar a mano.\n\nOpcionales\n- Observabilidad de aplicaciones con LLM y control de costos de inferencia.\n- Datos industriales, mantenimiento o minería.\n- Modelos abiertos y despliegue en entornos con restricciones de confidencialidad.\n\nCondiciones\nSomos una start up en desarrollo, con alto potencial de crecimiento. Tenemos flexibilidad para desarrollar trabajo de manera remota.",
+    "tags": [
+      "Machine Learning & AI",
+      "Python",
+      "Large Language Models",
+      "Retrieval-Augmented Generation",
+      "AI Agents",
+      "Vector Databases",
+      "Machine Learning"
+    ],
+    "scraped_at": "2026-11-16T03:44:38Z"
+  }
+]

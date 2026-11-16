@@ -1,0 +1,97 @@
+[
+  {
+    "source": "chiletrabajos",
+    "job_id": "3932267",
+    "title": "Analista de Tesorería - Las Condes",
+    "company": "Empresa Sector Financiero",
+    "location": "Santiago",
+    "modality": null,
+    "salary": "1",
+    "published_at": "2026-11-14T15:25:58Z",
+    "url": "https://www.chiletrabajos.cl/trabajo/analista-de-tesoreria-las-condes-3932267",
+    "description": "Importante empresa del sector financiero, está en búsqueda de un/a Analista de Tesorería para incorporarse a la brevedad a su área de Impuestos y Operaciones Financieras. Deberás gestionar procesos operativos de tesorería mediante uso de datos, automatización y sistemas para asegurar continuidad transaccional, exactitud contable y mejora continua en la relación con bancos y clientes internos.\nSi estás interesado/a te invitamos a revisar los requisitos y postular con tu CV actualizado y respondiendo las preguntas.\nLas funciones y requisitos son los siguientes:\nFunciones:\nAnalizar movimientos bancarios y conciliaciones para mantener consistencia de registros contables.\nControlar procesos de pagos para asegurar integridad, oportunidad y trazabilidad del proceso.\nAdministrar la relación operativa con bancos y proveedores para asegurar continuidad transaccional.\nCoordinar actividades de apoyo a cierres financieros para sostener exactitud operativa.\nMonitorear flujos de caja para anticipar desviaciones y priorizar acciones según calendarios y volúmenes.\nImplementar mejoras y automatizaciones en procesos operativos utilizando herramientas tecnológicas y de datos.\nOptimizar reportes de pagos y conciliaciones para fortalecer la calidad del registro contable.\nProponer soluciones de mejora continua a partir del análisis de datos y reporte de desviaciones.\nRequisitos:\nTítulo de Contador/a, Contador/a Auditor/a, Ingeniero/a Comercial o carrera afín.\nAl menos 2 años de experiencia directa en tesorería, pagos, conciliaciones bancarias o gestión bancaria (excluyente).\nAplicación de conocimientos tecnicos en: registro contable, conciliaciones bancarias, gestión de pagos, flujo de caja, gestión operativa de tesorería, análisis de datos, automatización de procesos.\nConocimientos y aplicación de normativa regulatoria del sistema financiero, normas contables aplicables (IFRS/NIC), lineamientos de control interno.\nHerramientas y plataformas: Excel avanzado, SQL, Python, herramientas de inteligencia artificial aplicada a procesos de negocio, ERP financiero, plataformas bancarias, sistemas de conciliación.\nCertifcaciones o capacitación deseable en SQL, Python, analítica de datos o automatización de procesos financieros.",
+    "tags": [
+      "Economía / Contabilidad",
+      "tesorería",
+      "procesos",
+      "datos"
+    ],
+    "scraped_at": "2026-11-16T01:58:32Z"
+  },
+  {
+    "source": "chiletrabajos",
+    "job_id": "3931872",
+    "title": "Líder de Soluciones de IA",
+    "company": "DICTUC S.A.",
+    "location": "Santiago",
+    "modality": null,
+    "salary": null,
+    "published_at": "2026-11-13T16:00:23Z",
+    "url": "https://www.chiletrabajos.cl/trabajo/lider-de-soluciones-de-ia-3931872",
+    "description": "DESCRIPCIÓN DEL PUESTO\nEn Dictuc estamos en búsqueda de un/a Líder de Soluciones de IA para integrarse a nuestro equipo de NOVA IA, quien tendrá como principales responsabilidades:\nParticipar en las instancias de planificación y seguimiento de proyectos del programa de Nova - IA, asegurando el cumplimiento de sus objetivos, plazos, entregables e indicadores. Mantener conocimiento actualizado del estado técnico de los desarrollos del programa a partir de sus repositorios en GitHub: código, documentación y registro de cambios. Participar en el diseño y estructuración de soluciones de inteligencia artificial, aportando conocimientos sobre tecnologías, herramientas, metodologías y posibilidades de aplicación según los requerimientos de cada proyecto. Asesorar técnicamente a la Gerencia y elaborar reportes sobre el avance, los riesgos y las oportunidades de los proyectos de inteligencia artificial del programa. Liderar el desarrollo de bienes públicos basados en inteligencia artificial, a partir de las capacidades y aprendizajes generados en los proyectos de Nova-IA. Proponer estándares y buenas prácticas de desarrollo, documentación y registro de los proyectos. Participar en desarrollar herramientas de inteligencia artificial para necesidades transversales de Nova-IA, internas o de nuevos proyectos, y apoyar la formación del equipo en su uso. Identificar oportunidades de nuevos proyectos y soluciones de inteligencia artificial, contribuyendo a su estructuración técnica y comercial, así como a la generación de propuestas de valor para el mercado.\nREQUISITOS\nAl menos 5 años de experiencia en gestión y dirección de proyectos.\nExperiencia en participación y/o liderazgo de proyectos de Inteligencia Artificial.\nFormación en Ingeniería en Computación, Ingeniería Civil en Computación, Ciencia de Datos o carrera afín.\nManejo de Python, Git y GitHub.\nCursos o certificaciones en Inteligencia Artificial o plataformas cloud (deseable).",
+    "tags": [
+      "Informática / Telecomunicaciones",
+      "proyectos",
+      "inteligencia",
+      "artificial"
+    ],
+    "scraped_at": "2026-11-16T01:58:32Z"
+  },
+  {
+    "source": "chiletrabajos",
+    "job_id": "3931838",
+    "title": "Práctica Informática - IDIEM (U. de Chile)",
+    "company": "Idiem",
+    "location": "Santiago",
+    "modality": null,
+    "salary": null,
+    "published_at": "2026-11-13T15:34:25Z",
+    "url": "https://www.chiletrabajos.cl/trabajo/practica-informatica-idiem-u-de-chile-3931838",
+    "description": "Centro de Investigación, Desarrollo e Innovación de la Universidad de Chile, líder nacional en ingeniería y tecnología, busca incorporar a un/a estudiante en práctica para el área de Optimización de Procesos y Mejora Continua.\nTu objetivo:\nApoyar el desarrollo, automatización e integración de tecnologías de hardware y software en los flujos operativos de la unidad, garantizando la captura y sincronización de datos en tiempo real.\n¿Qué harás?\n• Desarrollo e implementación de solución para conectar dispositivos físicos (balanzas de precisión e impresoras térmicas/de etiquetas) con Google Sheets.\n• Desarrollo de scripts/APIs para la sincronización de datos entre Google Sheets, el ERP Odoo y la Intranet de IDIEM.\n• Pruebas de funcionamiento en terreno, depuración de errores y documentación técnica del flujo de datos.\n• Apoyo en la automatización de otros flujos digitales dentro de la unidad.\n¿Qué buscamos?\n• Cursando carrera de Ingeniería Civil Computacional, Ingeniería en Ejecución/Civil Informática, Ingeniería Civil Electrónica o carreras a fin con competencias en programación e integración de sistemas.\n• Conocimientos de programación (Python, JavaScript / Apps Script, o similar).\n• Nociones sobre consumo de APIs REST / Webhooks e integración de sistemas.\n• Familiaridad con lectura de puertos (Serial/USB) para la captura de datos desde hardware (deseable).\n• Manejo de Google Workspace (Apps Script) y nociones de ERP.\n• Disponibilidad para práctica en formato presencial\nOfrecemos\nSer parte de una institución con el respaldo de la Universidad de Chile.\nAprendizaje en gestión de datos y normativas de calidad.",
+    "tags": [
+      "Prácticas profesionales",
+      "datos",
+      "ingeniería",
+      "desarrollo"
+    ],
+    "scraped_at": "2026-11-16T01:58:32Z"
+  },
+  {
+    "source": "chiletrabajos",
+    "job_id": "3931832",
+    "title": "Práctica de Procesos – IDIEM (U. de Chile)",
+    "company": "Idiem",
+    "location": "Santiago",
+    "modality": null,
+    "salary": null,
+    "published_at": "2026-11-13T15:30:31Z",
+    "url": "https://www.chiletrabajos.cl/trabajo/practica-de-procesos-idiem-u-de-chile-3931832",
+    "description": "Centro de Investigación, Desarrollo e Innovación de la Universidad de Chile, líder nacional en ingeniería y tecnología, busca incorporar a un/a estudiante en práctica para el área de Optimización de Procesos y Mejora Continua.\nTu objetivo:\nRealizar el levantamiento, diagnóstico y rediseño de flujos operativos en la unidad, asegurando la correcta adopción del nuevo sistema de captura e integración de datos y proponiendo iniciativas de mejora continua.\n¿Qué harás?\n• Levantamiento y mapeo de procesos actuales (As-Is) en las áreas operativas vinculadas a la medición y registro de datos.\n• Diseño del nuevo flujo de trabajo (To-Be) incorporando las herramientas de automatización desarrolladas.\n• Definición de indicadores clave de desempeño (KPIs) y control de tiempos/errores para evaluar el impacto de la mejora.\n• Elaboración de manuales de usuario, protocolos operacionales y capacitación al personal de la unidad.\n• Identificación de nuevos cuellos de botella y propuesta de proyectos de renovación de procesos.\n¿Qué buscamos?\n• Cursando carrera de Ingeniería Civil Industrial, Ingeniería de Procesos o carreras afines a la gestión y diseño operativo.\n• Conocimientos en modelamiento de procesos (BPMN, Bizagi, Visio o similar).\n• Manejo avanzado de herramientas de análisis de datos (Excel / Google Sheets, Power BI o similar).\n• Capacidad analítica, pensamiento crítico y metodologías de mejora continua (Lean, 5S, Kaizen o similar).\n• Conocimientos de programación (Python, JavaScript / Apps Script, o similar).\nOfrecemos\nSer parte de una institución con el respaldo de la Universidad de Chile.\nAprendizaje en gestión de datos y normativas de calidad.",
+    "tags": [
+      "Prácticas profesionales",
+      "procesos",
+      "mejora",
+      "datos"
+    ],
+    "scraped_at": "2026-11-16T01:58:32Z"
+  },
+  {
+    "source": "chiletrabajos",
+    "job_id": "3820101",
+    "title": "Ingeniero/a Informático — IA & Transformación Digital",
+    "company": "CONFIDENCIAL",
+    "location": "Santiago",
+    "modality": "presencial",
+    "salary": null,
+    "published_at": "2026-11-13T11:35:55Z",
+    "url": "https://www.chiletrabajos.cl/trabajo/ingeniero-a-informatico-ia-transformacion-digital-3820101",
+    "description": "Holding Retail & Ecommerce Las Condes, Santiago Presencial\nSomos un holding chileno con más de 10 años de trayectoria en retail y ecommerce, operando marcas propias y distribución exclusiva de marcas internacionales en Chile y Perú. Comercializamos a través de canales propios y marketplaces líderes de la región.\nBuscamos un/a Ingeniero/a Informático que no solo desarrolle software, sino que impulse nuestra transformación digital con inteligencia artificial y automatización aplicada al negocio.\nEntre sus principales funciones encontramos:\n• Diseñar e implementar soluciones con IA aplicada a procesos de negocio: ventas, logística, atención al cliente y reportería.\n• Liderar iniciativas de automatización y transformación digital en nuestros canales propios y marketplaces.\n• Desarrollar integraciones con APIs, LLMs y herramientas de IA generativa para optimizar flujos operativos.\n• Levantar necesidades, construir soluciones, testear y documentar con foco en impacto real.\n• Asesorar técnicamente en la evolución del stack tecnológico de la empresa.\nRequisitos\n• Título en Ingeniería Informática, Civil Informática o Civil en Computación (excluyente).\n• Interés demostrable en IA, automatización o transformación digital (proyectos, certificaciones o experiencia práctica).\n• Deseable: Python, Django, Angular/React, APIs RESTful, PostgreSQL/MySQL, AWS, GitHub/GitLab.\n• Excel avanzado. (Se realiza Prueba)\nCondiciones\n• Contrato inicial a plazo fijo, luego indefinido según desempeño.\n• Horario: lunes a jueves 08:00–18:00 / viernes 08:00–14:30 hrs\n• Modalidad 100% presencial en Providencia, Santiago.\n\nBeneficios\n- Mutual de Seguridad: La empresa esta adscrita a la mutual de seguridad\n- Caja de compensación: La empresa esta adscrita a una caja de compensación",
+    "tags": [
+      "Otros",
+      "digital",
+      "transformación",
+      "ingeniero"
+    ],
+    "scraped_at": "2026-11-16T01:58:32Z"
+  }
+]
