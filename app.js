@@ -10,8 +10,10 @@ const SOURCE_LABELS = {
 
 const CHILE_TIME_ZONE = "America/Santiago";
 const DAY_IN_MS = 24 * 60 * 60 * 1000;
+const VIEWED_STORAGE_KEY = "jobs-scrapper:viewed:v1";
 const state = {
   jobs: [],
+  viewed: new Map(),
 };
 
 const elements = {};
@@ -45,6 +47,7 @@ function cacheElements() {
     "source-filter",
     "status-light",
     "tag-filter",
+    "view-filter",
   ];
 
   for (const id of ids) {
@@ -79,6 +82,71 @@ function normalizeText(value) {
 function uniqueSorted(values) {
   const unique = [...new Set(values.filter((value) => typeof value === "string" && value.trim()))];
   return unique.sort((a, b) => a.localeCompare(b, "es", { sensitivity: "base" }));
+}
+
+function viewedKey(job) {
+  const jobId = String(job.job_id ?? "").trim();
+  if (jobId) return `${job.source ?? "__sin_fuente__"}:${jobId}`;
+  const url = String(job.url ?? "").trim().split("#")[0];
+  if (!url) return "";
+  return `url:${url.endsWith("/") ? url.slice(0, -1) : url}`;
+}
+
+function isViewed(job) {
+  const key = viewedKey(job);
+  return Boolean(key) && state.viewed.has(key);
+}
+
+function loadViewed() {
+  state.viewed.clear();
+  let raw = null;
+  try {
+    raw = window.localStorage.getItem(VIEWED_STORAGE_KEY);
+  } catch (error) {
+    console.warn("No se pudo leer el estado de ofertas vistas:", error);
+    return;
+  }
+  if (!raw) return;
+
+  try {
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return;
+    for (const [key, value] of Object.entries(parsed)) {
+      if (typeof key === "string" && key) {
+        state.viewed.set(key, typeof value === "number" ? value : Date.now());
+      }
+    }
+  } catch (error) {
+    console.warn("El estado guardado de ofertas vistas no es JSON válido:", error);
+  }
+}
+
+function persistViewed() {
+  try {
+    window.localStorage.setItem(
+      VIEWED_STORAGE_KEY,
+      JSON.stringify(Object.fromEntries(state.viewed)),
+    );
+  } catch (error) {
+    console.warn("No se pudo guardar el estado de ofertas vistas:", error);
+  }
+}
+
+function applyViewedButton(button, viewed) {
+  if (!button) return;
+  const title = button.dataset.jobTitle;
+  button.setAttribute("aria-pressed", String(viewed));
+  button.setAttribute(
+    "aria-label",
+    viewed
+      ? `Quitar marca de vista: ${title || "oferta"}`
+      : `Marcar como vista: ${title || "oferta"}`,
+  );
+  button.title = viewed ? "Quitar marca de vista" : "Marcar como vista";
+  button.replaceChildren(
+    document.createTextNode(viewed ? "VISTA" : "MARCAR VISTA"),
+    makeElement("span", "", viewed ? "✓" : "○"),
+  );
 }
 
 function populateSelect(select, values, { unknownValue, unknownLabel } = {}) {
@@ -126,6 +194,7 @@ function readFilters() {
     company: elements.companyFilter.value,
     tag: elements.tagFilter.value,
     period: elements.periodFilter.value,
+    viewed: elements.viewFilter.value,
   };
 }
 
@@ -157,6 +226,12 @@ function matchesSearch(job, query) {
   return terms.every((term) => haystack.includes(term));
 }
 
+function matchesViewed(job, filterValue) {
+  if (filterValue === "unseen") return !isViewed(job);
+  if (filterValue === "seen") return isViewed(job);
+  return true;
+}
+
 function filterJobs() {
   const filters = readFilters();
   return state.jobs.filter((job) => (
@@ -167,6 +242,7 @@ function filterJobs() {
     && matchesExact(job.company, filters.company)
     && (filters.tag === "all" || (Array.isArray(job.tags) && job.tags.includes(filters.tag)))
     && matchesPeriod(job, filters.period)
+    && matchesViewed(job, filters.viewed)
   ));
 }
 
@@ -217,6 +293,11 @@ function appendMetadata(list, value, className = "") {
 function createJobCard(job, index) {
   const card = makeElement("article", "job-card");
   card.dataset.jobId = job.job_id ?? "";
+
+  const jobKey = viewedKey(job);
+  const viewed = Boolean(jobKey) && state.viewed.has(jobKey);
+  if (jobKey) card.dataset.jobKey = jobKey;
+  if (viewed) card.classList.add("is-viewed");
 
   const main = makeElement("div", "job-main");
   const topline = makeElement("div", "job-topline");
@@ -276,18 +357,20 @@ function createJobCard(job, index) {
     published.title = formatDate(job.published_at, true);
   }
 
-  if (job.url) {
-    const link = makeElement("a", "job-link");
-    link.href = job.url;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.setAttribute("aria-label", `Abrir oferta: ${job.title ?? "cargo no informado"}`);
-    link.append(document.createTextNode("ABRIR OFERTA"), makeElement("span", "", "↗"));
-    side.append(published, link);
-  } else {
-    side.append(published, makeElement("span", "job-link is-unavailable", "URL NO DISPONIBLE"));
+  const actions = makeElement("div", "job-side-actions");
+  if (!job.url) {
+    actions.append(makeElement("span", "job-link is-unavailable", "URL NO DISPONIBLE"));
   }
 
+  const toggle = makeElement("button", "job-link job-view-toggle");
+  toggle.type = "button";
+  toggle.dataset.action = "toggle-view";
+  toggle.dataset.jobTitle = job.title ?? "";
+  toggle.disabled = !jobKey;
+  applyViewedButton(toggle, viewed);
+  actions.append(toggle);
+
+  side.append(published, actions);
   card.append(main, side);
   return card;
 }
@@ -305,12 +388,17 @@ function renderActiveChips(filters) {
     company: "EMPRESA",
     tag: "TECNOLOGÍA",
     period: "PUBLICACIÓN",
+    viewed: "VISTAS",
   };
   const periodLabels = {
     "1": "Últimas 24 horas",
     "7": "Últimos 7 días",
     "14": "Últimos 14 días",
     "30": "Últimos 30 días",
+  };
+  const viewLabels = {
+    unseen: "Ocultar vistas",
+    seen: "Solo vistas",
   };
   const noneLabels = {
     "__none__": "No informada",
@@ -323,7 +411,11 @@ function renderActiveChips(filters) {
     button.type = "button";
     button.dataset.filter = key;
     button.setAttribute("aria-label", `Quitar filtro ${labels[key]}: ${value}`);
-    const displayValue = key === "period" ? periodLabels[value] : (noneLabels[value] ?? value);
+    const displayValue = key === "period"
+      ? periodLabels[value]
+      : key === "viewed"
+        ? (viewLabels[value] ?? value)
+        : (noneLabels[value] ?? value);
     button.append(
       makeElement("span", "", `${labels[key]}: ${displayValue}`),
       makeElement("span", "", "×"),
@@ -383,6 +475,7 @@ function updateDatasetMetadata() {
 function clearFilters() {
   elements.filtersForm.reset();
   elements.search.value = "";
+  elements.viewFilter.value = "all";
   renderResults();
 }
 
@@ -395,6 +488,7 @@ function clearSingleFilter(filterName) {
     company: elements.companyFilter,
     tag: elements.tagFilter,
     period: elements.periodFilter,
+    viewed: elements.viewFilter,
   };
   const control = controls[filterName];
   if (!control) return;
@@ -452,14 +546,43 @@ async function loadJobs() {
   }
 }
 
+function toggleViewed(button) {
+  const card = button.closest(".job-card");
+  const key = card?.dataset.jobKey;
+  if (!card || !key) return;
+
+  const viewed = !state.viewed.has(key);
+  if (viewed) {
+    state.viewed.set(key, Date.now());
+  } else {
+    state.viewed.delete(key);
+  }
+  persistViewed();
+
+  // Se actualiza en el sitio para no re-renderizar ni perder el scroll.
+  card.classList.toggle("is-viewed", viewed);
+  applyViewedButton(button, viewed);
+
+  const filterValue = elements.viewFilter.value;
+  const hiddenByFilter = (filterValue === "unseen" && viewed)
+    || (filterValue === "seen" && !viewed);
+  if (hiddenByFilter) renderResults();
+}
+
 function bindEvents() {
   elements.filtersForm.addEventListener("submit", (event) => event.preventDefault());
   elements.filtersForm.addEventListener("input", renderResults);
   elements.filtersForm.addEventListener("change", renderResults);
   elements.sortOrder.addEventListener("change", renderResults);
+  elements.viewFilter.addEventListener("change", renderResults);
   elements.clearFilters.addEventListener("click", clearFilters);
   elements.resetEmpty.addEventListener("click", clearFilters);
   elements.retryLoad.addEventListener("click", () => window.location.reload());
+
+  elements.jobsList.addEventListener("click", (event) => {
+    const button = event.target.closest?.('button[data-action="toggle-view"]');
+    if (button && elements.jobsList.contains(button)) toggleViewed(button);
+  });
 
   elements.activeChips.addEventListener("click", (event) => {
     const button = event.target.closest("button[data-filter]");
@@ -488,6 +611,7 @@ function bindEvents() {
 function init() {
   cacheElements();
   bindEvents();
+  loadViewed();
   loadJobs();
 }
 

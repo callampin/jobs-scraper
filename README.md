@@ -62,9 +62,10 @@ La interfaz está en `index.html`, `styles.css` y `app.js`, sin frameworks ni pr
 Incluye:
 
 - Búsqueda multitérmino sin distinguir mayúsculas ni tildes.
-- Filtros por portal, modalidad, ubicación, empresa, categoría/etiqueta y antigüedad.
+- Filtros por portal, modalidad, ubicación, empresa, categoría/etiqueta, antigüedad y ofertas vistas.
 - Orden por fecha, cargo o empresa.
 - Chips de filtros, descripciones desplegables y enlaces directos.
+- Marca de "vista" por oferta, persistida en `localStorage` del navegador y ajena a `jobs.json`.
 - Descarga del JSON, estados de carga/error y diseño responsivo.
 - Fondo negro, Geist Pixel y Geist Mono.
 

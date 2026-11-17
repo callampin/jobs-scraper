@@ -479,6 +479,13 @@ select:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
+.toolbar-fields {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  gap: 14px;
+}
+
 .sort-field {
   width: 190px;
   flex: 0 0 auto;
@@ -529,6 +536,36 @@ select:focus-visible {
 
 .job-card:hover {
   background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--panel-hover) 70%, transparent) 12%, color-mix(in srgb, var(--panel-hover) 70%, transparent) 88%, transparent);
+}
+
+.job-card.is-viewed {
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--panel) 65%, transparent) 12%, color-mix(in srgb, var(--panel) 65%, transparent) 88%, transparent);
+}
+
+.job-card.is-viewed:hover {
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--panel-hover) 45%, transparent) 12%, color-mix(in srgb, var(--panel-hover) 45%, transparent) 88%, transparent);
+}
+
+.job-card.is-viewed .job-number,
+.job-card.is-viewed .job-source,
+.job-card.is-viewed .job-title,
+.job-card.is-viewed .job-title a,
+.job-card.is-viewed .job-company,
+.job-card.is-viewed .job-company strong,
+.job-card.is-viewed .job-meta,
+.job-card.is-viewed .job-tags li,
+.job-card.is-viewed .job-date,
+.job-card.is-viewed .job-description summary {
+  color: var(--faint);
+}
+
+.job-card.is-viewed .job-meta .salary {
+  color: var(--muted);
+}
+
+.job-card.is-viewed .job-tags,
+.job-card.is-viewed .job-description {
+  opacity: 0.7;
 }
 
 .job-topline {
@@ -651,6 +688,13 @@ select:focus-visible {
   gap: 28px;
 }
 
+.job-side-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
 .job-date {
   color: var(--muted);
   font-size: 10px;
@@ -663,12 +707,28 @@ select:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding-bottom: 5px;
+  padding: 0 0 5px;
+  border: 0;
   border-bottom: 1px solid var(--line-strong);
+  background: none;
   color: var(--text-soft);
   font-size: 9px;
   letter-spacing: 0.8px;
   white-space: nowrap;
+}
+
+.job-link.job-view-toggle {
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.job-link.job-view-toggle[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.job-link.job-view-toggle:disabled {
+  border-color: var(--line);
+  color: var(--faint);
 }
 
 .job-link span {
@@ -881,6 +941,12 @@ select:focus-visible {
   .job-card {
     gap: 24px;
   }
+
+  .toolbar-fields {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -954,8 +1020,15 @@ select:focus-visible {
     font-size: 26px;
   }
 
+  .toolbar-fields {
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
   .sort-field {
-    width: 150px;
+    width: 140px;
   }
 
   .job-card {
@@ -1006,6 +1079,10 @@ select:focus-visible {
   }
 
   .results-toolbar {
+    display: block;
+  }
+
+  .toolbar-fields {
     display: block;
   }
 
