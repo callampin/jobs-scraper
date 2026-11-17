@@ -26,6 +26,7 @@ Abre <http://localhost:8000>. No uses `file://`: el navegador bloqueará `jobs.j
 
 Si prefieres ejecutarlo a mano, los comandos están en [`AGENTS.md`](./AGENTS.md).
 
+<!--
 ## Estado de los conectores
 
 | Orden | Portal | Estado | Método |
@@ -173,3 +174,4 @@ tests/                  Pruebas del orquestador y la web
 - No evadir autenticación, CAPTCHA, bloqueos por fingerprint ni protecciones anti-bot.
 - Si un portal bloquea peticiones normales, detenerse y reportarlo.
 - No inventar empresa, ubicación, salario, modalidad, fechas ni descripciones.
+-->
